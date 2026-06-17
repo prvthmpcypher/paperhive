@@ -1,48 +1,68 @@
 # PaperHive
 
-PaperHive is a static, offline-first PDF product built with HTML, CSS, JavaScript, PDF.js, jsPDF, and JSZip.
+> A private, offline-first PDF toolkit — unlock, edit, convert, and clean documents without ever uploading them.
 
-## Structure
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://paperhive.vercel.app/) [![License](https://img.shields.io/badge/license-MIT-blue)]() [![Made with ❤️](https://img.shields.io/badge/made%20with-%E2%9D%A4-red)]()
 
-- `index.html` — landing page with clear feature sections, workflow, tool categories, privacy-first messaging, and CTAs.
-- `workspace.html` — upload, unlock, viewer, editor, converter and export workspace.
-- `about.html` — full mock about-me profile, social links, and contact details without an email button.
-- `docs.html` — all legal docs in one place: privacy policy, terms, acceptable use, security notes, disclaimer, cookies/tracking, legal contact.
-- `privacy.html` and `terms.html` — lightweight compatibility pages that point to `docs.html`.
+---
 
-## Workspace features
+## 🚀 Live Demo
+[paperhive.vercel.app](https://paperhive.vercel.app/)
 
-- Upload locked or unlocked PDFs locally
-- Enter an authorized PDF open password and view with offline PDF.js
-- Download an unlocked, sanitized, flattened PDF rebuild
-- PaperKnife-style visual editor layer with select, drag, resize, text, freehand drawing, signature images, highlights, redaction boxes, and watermarks
-- Drag to rearrange pages, skip/restore pages, and export page ranges such as `1-3, 5, 8`
-- Convert PDF pages to PNG/JPEG ZIP
-- Convert images to PDF
-- Convert text notes to PDF
-- Privacy-first legal authorization checkbox and clear-session controls
-- Service worker and local vendor assets for offline use
+## ✨ Features
+- Password unlock for PDFs you're authorized to open
+- Offline viewer with zoom, rotate, and page navigation (PDF.js)
+- Visual editor — text, freehand drawing, signature images, highlights, redaction boxes, watermarks
+- Drag-to-reorder pages, skip/restore pages, export custom page ranges (e.g. `1-3, 5, 8`)
+- Convert PDF pages → image ZIP, images → PDF, text notes → PDF
+- Sanitized, flattened export that strips original metadata/scripts/encryption
+- Fully offline-capable PWA — all vendor assets bundled locally, zero remote API calls
 
-## Important note about unlocking
+## 🛠 Tech Stack
+| Layer | Tech |
+|---|---|
+| Frontend | Vanilla HTML, CSS, JavaScript |
+| PDF Engine | PDF.js, jsPDF, JSZip (all vendored locally) |
+| Hosting | Vercel |
+| Offline | Service Worker + Web App Manifest |
 
-PaperHive does not crack unknown passwords. It opens PDFs only when you provide a valid password you are authorized to use. The exported “unlocked” copy is rebuilt from rendered page images, so it is password-free and flattened, but may not preserve selectable text, forms, bookmarks, layers, metadata, attachments, or digital signatures.
-
-## Run locally
-
-Because modern browser modules and PDF.js workers are more reliable from a local server than from `file://`, run:
-
+## ⚡ Quick Start
 ```bash
+git clone https://github.com/prvthmpcypher/PaperHive
+cd PaperHive
 python3 -m http.server 8080
 ```
+Then open `http://localhost:8080` — start at the landing page, then launch the Workspace.
 
-Then open:
-
-```text
-http://localhost:8080
+## 📁 Project Structure
+```
+PaperHive/
+├── index.html          # Landing page
+├── workspace.html       # Upload, unlock, edit, convert workspace
+├── about.html           # About the maker
+├── docs.html             # All legal docs (privacy, terms, security notes)
+├── app.js                 # Core workspace logic
+├── style.css
+├── sw.js                  # Service worker for offline caching
+├── manifest.webmanifest
+└── assets/
+    └── vendor/            # PDF.js, jsPDF, JSZip — bundled, no CDN
 ```
 
-Use the landing page first, then click **Launch PDF Workspace**.
+## 🔒 Security
+This project follows security best practices: a strict Content-Security-Policy, no remote API calls or third-party analytics, and security headers (HSTS, X-Frame-Options, Permissions-Policy) configured via `vercel.json`. All processing happens client-side — your files never leave the browser.
 
-## No APIs
+## 📄 License
+MIT © 2026 Poorvith
 
-The app contains no remote API calls, analytics, ads, external fonts, or CDN dependencies. All PDF.js assets are vendored in `assets/vendor/`.
+## 🤝 Connect
+| Platform | Link |
+|---|---|
+| LinkedIn | [linkedin.com/in/prvthmp](https://linkedin.com/in/prvthmp) |
+| GitHub | [github.com/prvthmpcypher](https://github.com/prvthmpcypher) |
+| Instagram | [instagram.com/prvthmp](https://instagram.com/prvthmp) |
+| Twitter/X | [x.com/prvthmp](https://x.com/prvthmp) |
+| Buy Me a Coffee | [buymeacoffee.com/prvthmp](https://buymeacoffee.com/prvthmp) |
+
+---
+*Built and shipped by Poorvith · 2026*
