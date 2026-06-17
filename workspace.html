@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="PaperHive is a privacy-first, offline PDF viewer, password unlocker, converter and lightweight editor that runs 100% in your browser.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: blob:; script-src 'self' 'unsafe-inline' blob:; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; worker-src 'self' blob:; connect-src 'self' data: blob:; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <title>Workspace — PaperHive Offline PDF Editor</title>
+  <meta property="og:title" content="Workspace — PaperHive Offline PDF Editor">
+  <meta property="og:description" content="Upload, unlock, view, edit, convert, and export PDFs entirely in your browser — no uploads, no APIs.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://paperhive.app/workspace.html">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar" aria-label="Floating navigation">
+    <a class="brand" href="index.html" aria-label="PaperHive home">
+      <img src="assets/icons/paperhive-logo.svg" alt="PaperHive logo">
+      <span><strong>PaperHive</strong><span>Offline PDF security suite</span></span>
+    </a>
+    <nav id="navlinks" class="navlinks" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="#unlock">Unlock</a>
+      <a href="#viewer">Viewer</a>
+      <a href="#editor">Editor</a>
+      <a href="#converter">Converter</a>
+      <a href="#security">Security</a>
+      <a href="about.html">About</a>
+      <a href="docs.html">Docs</a>
+    </nav>
+    <div class="socials" aria-label="Social links">
+      <a href="https://facebook.com/prvthmp" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3c-3.3 0-5 2-5 5v3H6v4h3v8h4v-8h3.2l.8-4h-4V9c0-.7.3-1 1-1Z"/></svg></a>
+      <a href="https://instagram.com/prvthmp" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm5.5-2.8a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6Z"/></svg></a>
+      <a href="https://x.com/prvthmp" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3L12 14.7 5.8 22H2.6l7.3-8.4L2.2 2h6.5l4.4 6.6L18.9 2Zm-1.1 17.9h1.7L7.8 4H6l11.8 15.9Z"/></svg></a>
+      <a href="https://linkedin.com/in/prvthmp" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5ZM3 9.8h4v12H3v-12Zm6.2 0H13v1.7h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6v6.3h-4v-5.6c0-1.3 0-3.1-1.9-3.1s-2.2 1.5-2.2 3v5.7h-4v-12Z"/></svg></a>
+      <a href="https://github.com/prvthmpcypher" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 .7a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.2.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 .1.9 2.2 3.4 1.6.1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.2 11.2 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6A11.5 11.5 0 0 0 12 .7Z"/></svg></a>
+    </div>
+    <button id="mobile-menu" class="icon-btn mobile-menu" type="button" aria-label="Open menu">☰</button>
+  </header>
+
+  <main class="app-shell">
+    <section class="hero" id="unlock">
+      <div class="hero-card">
+        <span class="eyebrow">🔐 No APIs · 100% client-side · offline-ready</span>
+        <h1><span class="gradient-text">Unlock, view, edit</span> and convert PDFs privately.</h1>
+        <p class="lead">PaperHive is a polished browser-based alternative to premium PDF tools for people who want privacy first. Upload a locked PDF, enter the owner/open password you are authorized to use, and export a flattened unlocked copy without sending the file anywhere.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#viewer">Open workspace</a>
+          <a class="btn" href="#security">Security model</a>
+          <a class="btn ghost" href="docs.html#terms">Legal use</a>
+        </div>
+        <div class="trust-grid" aria-label="PaperHive guarantees">
+          <div>Local only<span>No server upload</span></div>
+          <div>PDF.js offline<span>Vendored worker/assets</span></div>
+          <div>Sanitized export<span>Flattened rebuilt PDF</span></div>
+        </div>
+      </div>
+
+      <aside class="upload-card panel" aria-label="Upload locked PDF">
+        <div id="drop-zone" class="drop-zone" role="button" tabindex="0">
+          <svg viewBox="0 0 120 120" aria-hidden="true">
+            <defs><linearGradient id="hero-g" x1="15" x2="100" y1="10" y2="110"><stop stop-color="#ffcf58"/><stop offset=".55" stop-color="#ff7b54"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs>
+            <rect x="14" y="10" width="76" height="96" rx="16" fill="#fff" stroke="#d9e2f2" stroke-width="4"/>
+            <path d="M70 10v21a9 9 0 0 0 9 9h11" fill="#edf3fc"/>
+            <rect x="26" y="49" width="52" height="23" rx="8" fill="#ef4444"/>
+            <text x="52" y="66" text-anchor="middle" font-size="15" font-weight="900" font-family="Arial" fill="#fff">PDF</text>
+            <path d="M49 94v-8a13 13 0 1 1 26 0v8" fill="none" stroke="#1f2937" stroke-width="7" stroke-linecap="round"/>
+            <rect x="42" y="91" width="40" height="25" rx="9" fill="url(#hero-g)"/>
+          </svg>
+          <h2>Upload locked PDF</h2>
+          <p class="muted">Drag & drop your PDF here or use the chooser. Files stay in memory on this device.</p>
+          <input id="pdf-file" class="sr-only" type="file" accept="application/pdf,.pdf">
+          <button class="btn small" type="button" onclick="document.getElementById('pdf-file').click()">Choose PDF</button>
+        </div>
+        <div id="file-meta" class="file-meta"></div>
+        <div class="form-grid">
+          <div class="field">
+            <label for="pdf-password">PDF password</label>
+            <input id="pdf-password" type="password" autocomplete="off" placeholder="Enter password if locked">
+          </div>
+          <button id="toggle-password" class="btn" type="button">Show</button>
+        </div>
+        <label class="checkbox-row"><input id="auth-check" type="checkbox"> <span>I confirm I own this PDF or have permission to unlock, edit, convert, and export it.</span></label>
+        <label class="checkbox-row"><input id="auto-clear" type="checkbox"> <span>Auto-clear file bytes and password after download.</span></label>
+        <div class="hero-actions">
+          <button id="load-pdf" class="btn primary" type="button">Load PDF</button>
+          <button id="clear-session" class="btn danger" type="button">Clear session</button>
+        </div>
+        <div id="status" class="status" role="status" aria-live="polite">Ready.</div>
+        <div class="progress-wrap" aria-label="Progress"><div id="progress-bar" class="progress-bar"></div></div>
+      </aside>
+    </section>
+
+    <section id="viewer">
+      <div class="section-title">
+        <div>
+          <h2>PDF viewer & unlock workspace</h2>
+          <p>Open encrypted PDFs with PDF.js, preview pages offline, then export an unlocked flattened PDF copy. Page skips and annotations are applied during rebuild.</p>
+        </div>
+        <div class="toolbar">
+          <button id="download-unlocked" class="btn primary" type="button" disabled>Download unlocked PDF</button>
+          <button id="pdf-to-images" class="btn" type="button" disabled>PDF → image ZIP</button>
+        </div>
+      </div>
+
+      <div class="viewer-shell">
+        <div class="toolbar" aria-label="Viewer controls">
+          <button id="prev-page" class="btn small" type="button">← Prev</button>
+          <strong id="page-indicator">No PDF loaded</strong>
+          <button id="next-page" class="btn small" type="button">Next →</button>
+          <button id="zoom-out" class="btn small" type="button">− Zoom</button>
+          <button id="zoom-in" class="btn small" type="button">+ Zoom</button>
+          <button id="rotate-view" class="btn small" type="button">Rotate</button>
+          <button id="delete-page" class="btn small" type="button" disabled>Skip page</button>
+          <button id="restore-page" class="btn small" type="button" disabled>Restore page</button>
+          <button id="reset-order" class="btn small" type="button" disabled>Reset order</button>
+        </div>
+        <div class="viewer-layout">
+          <aside class="sidebar">
+            <h3>Pages</h3>
+            <div id="page-list" class="page-list"><p class="muted">No pages loaded yet.</p></div>
+          </aside>
+          <div class="canvas-wrap" aria-label="PDF canvas viewer">
+            <div id="empty-view" class="empty-view">
+              <h3>No PDF loaded</h3>
+              <p>Upload a file above to activate the viewer, unlocker, editor, splitter, and converter.</p>
+            </div>
+            <canvas id="pdf-canvas" class="hidden"></canvas>
+            <div id="annotation-layer" class="annotation-layer hidden" aria-label="Editable annotation layer"></div>
+          </div>
+          <aside id="editor" class="editor-panel">
+            <h3>Editor tools</h3>
+            <div class="editor-stack">
+              <div class="mode-list" role="group" aria-label="Editor modes">
+                <button class="active" type="button" data-mode="select">Select</button>
+                <button type="button" data-mode="text">Text</button>
+                <button type="button" data-mode="draw">Draw</button>
+                <button type="button" data-mode="redact">Redact</button>
+                <button type="button" data-mode="highlight">Highlight</button>
+                <button type="button" data-mode="signature">Signature</button>
+              </div>
+              <div class="field">
+                <label for="text-value">Text or watermark</label>
+                <input id="text-value" type="text" value="Approved by PaperHive" maxlength="120">
+              </div>
+              <div class="field">
+                <label for="signature-input">Signature image</label>
+                <input id="signature-input" type="file" accept="image/png,image/jpeg,image/webp,image/*">
+              </div>
+              <p class="muted">Choose a mode, then click the page. Select placed items to drag, resize, or delete.</p>
+              <div class="range-row">
+                <div class="field"><label for="text-size">Size</label><input id="text-size" type="number" min="8" max="96" value="18"></div>
+                <div class="field"><label for="text-color">Color</label><input id="text-color" type="color" value="#7c3aed"></div>
+              </div>
+              <div class="range-row">
+                <div class="field"><label for="box-width">Box width %</label><input id="box-width" type="number" min="4" max="100" value="28"></div>
+                <div class="field"><label for="box-height">Box height %</label><input id="box-height" type="number" min="2" max="100" value="8"></div>
+              </div>
+              <button id="add-watermark" class="btn" type="button">Watermark all pages</button>
+              <button id="delete-selected" class="btn danger" type="button" disabled>Delete selected edit</button>
+              <button id="clear-page-ann" class="btn" type="button">Clear this page</button>
+              <button id="clear-all-ann" class="btn danger" type="button">Clear all edits</button>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="converter">
+      <div class="section-title">
+        <div>
+          <h2>Converter, splitter & rebuilt export</h2>
+          <p>Convert PDF pages to images, images to PDF, and text notes to PDF. The page range field also works as a splitter/extractor for sanitized PDF export.</p>
+        </div>
+      </div>
+      <div class="tool-grid">
+        <article class="tool-card">
+          <h3>Export unlocked / edited PDF</h3>
+          <p>Rebuilds selected pages as a new PDF without the open password. This intentionally flattens pages as images for privacy and reliability.</p>
+          <div class="field"><label for="download-range">Pages to export</label><input id="download-range" type="text" placeholder="All, or e.g. 1-3, 5, 8"></div>
+          <div class="inline-fields">
+            <div class="field"><label for="image-format">Format</label><select id="image-format"><option>JPEG</option><option>PNG</option></select></div>
+            <div class="field"><label for="export-scale">Scale <span id="export-scale-label">2.0×</span></label><input id="export-scale" type="range" min="1" max="3" step="0.25" value="2"></div>
+            <div class="field"><label for="jpeg-quality">JPEG <span id="jpeg-quality-label">86%</span></label><input id="jpeg-quality" type="range" min="50" max="100" value="86"></div>
+          </div>
+          <div class="hero-actions"><button id="download-edited" class="btn primary" type="button" disabled>Download rebuilt PDF</button></div>
+        </article>
+
+        <article class="tool-card">
+          <h3>Images → PDF</h3>
+          <p>Create an offline PDF from screenshots, scans, JPG, PNG, and WebP images. One image becomes one page.</p>
+          <div class="field"><label for="image-input">Choose images</label><input id="image-input" type="file" accept="image/*" multiple></div>
+          <div class="hero-actions"><button id="images-to-pdf" class="btn" type="button">Create image PDF</button></div>
+        </article>
+
+        <article class="tool-card">
+          <h3>Text → PDF</h3>
+          <p>Paste notes, legal text, or a cover page and save it as a simple PDF without any server.</p>
+          <div class="field"><label for="notes-text">Text notes</label><textarea id="notes-text" placeholder="Paste text to convert into a PDF…"></textarea></div>
+          <div class="hero-actions"><button id="text-to-pdf" class="btn" type="button">Create text PDF</button></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="security">
+      <div class="section-title">
+        <div>
+          <h2>Advanced privacy & security</h2>
+          <p>PaperHive is designed for offline document work. It does not include analytics, ads, remote APIs, cloud storage, or hidden network calls.</p>
+        </div>
+      </div>
+      <div class="security-grid">
+        <div class="security-item"><strong>🔒 Password not stored</strong><span class="muted">The password field uses autocomplete off and is cleared with session cleanup.</span></div>
+        <div class="security-item"><strong>🧹 Sanitized rebuild</strong><span class="muted">Exports do not copy original metadata, scripts, forms, attachments, or encryption settings.</span></div>
+        <div class="security-item"><strong>📴 Offline vendor files</strong><span class="muted">PDF.js, its worker, fonts, CMaps, jsPDF, and JSZip are bundled locally.</span></div>
+        <div class="security-item"><strong>✅ Authorization guard</strong><span class="muted">The app asks for confirmation before opening or exporting protected PDFs.</span></div>
+      </div>
+    </section>
+
+    <section id="about-preview">
+      <div class="section-title">
+        <div>
+          <h2>About the maker</h2>
+          <p>Built and shipped by a student developer, in public.</p>
+        </div>
+      </div>
+      <div class="legal-grid">
+        <article class="legal-card">
+          <h3>Poorvith — Student Developer & Indie Builder</h3>
+          <p>I build privacy-first productivity tools from Karnataka, India. I learn by shipping — fast offline web apps, clean interfaces, and useful security defaults are the focus.</p>
+          <p><strong>Location:</strong> Karnataka, India<br><strong>Specialties:</strong> JavaScript, PDF tooling, UI systems, privacy UX</p>
+          <a class="btn" href="about.html">Read full about page</a>
+        </article>
+        <article class="legal-card">
+          <h3>Important limitation</h3>
+          <p>The "unlocked PDF" export is a flattened, rasterized rebuild generated from pages you are able to open with the correct password. It is excellent for viewing, sharing, printing, redaction, and password-free copies, but it may not preserve selectable text, layers, forms, bookmarks, or digital signatures.</p>
+          <p>Use PaperHive only for documents you own or are allowed to process.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="legal">
+      <div class="section-title">
+        <div>
+          <h2>Legal pages</h2>
+          <p>Plain-language legal pages for a privacy-first offline tool.</p>
+        </div>
+      </div>
+      <div class="legal-grid">
+        <article class="legal-card"><h3>Privacy Policy</h3><p>PaperHive does not upload PDF files, passwords, images, or notes. Processing happens in your browser. See the full privacy page for local storage, service worker, and security details.</p><a class="btn" href="docs.html#privacy">Open privacy policy</a></article>
+        <article class="legal-card"><h3>Terms of Service</h3><p>You are responsible for using PaperHive lawfully and only with files you own or have permission to process. See the full terms for limitations and disclaimers.</p><a class="btn" href="docs.html#terms">Open terms</a></article>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>
+        <a class="brand" href="index.html"><img src="assets/icons/paperhive-logo.svg" alt="PaperHive logo"><span><strong>PaperHive</strong><span>Private PDF tools for your browser</span></span></a>
+        <p class="muted">Offline PDF password unlocker, viewer, converter, splitter, editor, and sanitizer. Built with HTML, CSS, JavaScript, PDF.js, jsPDF, and JSZip.</p>
+        <div class="socials" style="display:flex" aria-label="Footer social links">
+          <a href="https://facebook.com/prvthmp" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3c-3.3 0-5 2-5 5v3H6v4h3v8h4v-8h3.2l.8-4h-4V9c0-.7.3-1 1-1Z"/></svg></a>
+          <a href="https://instagram.com/prvthmp" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm5 6a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm5.5-.8a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6Z"/></svg></a>
+          <a href="https://x.com/prvthmp" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3L12 14.7 5.8 22H2.6l7.3-8.4L2.2 2h6.5l4.4 6.6L18.9 2Zm-1.1 17.9h1.7L7.8 4H6l11.8 15.9Z"/></svg></a>
+          <a href="https://linkedin.com/in/prvthmp" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5ZM3 9.8h4v12H3v-12Zm6.2 0H13v1.7h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6v6.3h-4v-5.6c0-1.3 0-3.1-1.9-3.1s-2.2 1.5-2.2 3v5.7h-4v-12Z"/></svg></a>
+          <a href="https://github.com/prvthmpcypher" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 .7a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.2.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 .1.9 2.2 3.4 1.6.1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.2 11.2 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6A11.5 11.5 0 0 0 12 .7Z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-links"><strong>Tools</strong><a href="workspace.html#unlock">Unlock PDF</a><a href="workspace.html#viewer">PDF viewer</a><a href="workspace.html#editor">PDF editor</a><a href="workspace.html#converter">Converters</a></div>
+      <div class="footer-links"><strong>Company</strong><a href="about.html">About</a><a href="docs.html#privacy">Privacy Policy</a><a href="docs.html#terms">Terms of Service</a></div>
+      <div class="footer-bottom"><span>© <span id="year">2026</span> PaperHive.</span><span>Privacy-first. No APIs. Client-side only.</span></div>
+    </footer>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="assets/vendor/jspdf.umd.min.js"></script>
+  <script src="assets/vendor/jszip.min.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

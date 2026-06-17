@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="PaperHive is an offline, privacy-first PDF toolkit with password unlock, viewer, editor, converter, splitter, redaction, signatures, and document sanitation.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: blob:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <title>PaperHive — Private Offline PDF Tools</title>
+  <meta property="og:title" content="PaperHive — Private Offline PDF Tools">
+  <meta property="og:description" content="Offline, privacy-first PDF toolkit with password unlock, viewer, editor, converter, splitter, redaction, and signatures.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/icons/paperhive-logo.svg">
+  <link rel="canonical" href="https://paperhive.app/index.html">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar" aria-label="Floating navigation">
+    <a class="brand" href="index.html" aria-label="PaperHive home">
+      <img src="assets/icons/paperhive-logo.svg" alt="PaperHive logo">
+      <span><strong>PaperHive</strong><span>Private offline PDF tools</span></span>
+    </a>
+    <nav id="navlinks" class="navlinks" aria-label="Primary navigation">
+      <a href="#features">Features</a>
+      <a href="#workflow">How it works</a>
+      <a href="#tools">Tools</a>
+      <a href="#privacy-first">Security</a>
+      <a href="workspace.html">Workspace</a>
+      <a href="about.html">About</a>
+      <a href="docs.html">Docs</a>
+    </nav>
+    <div class="socials" aria-label="Social links">
+      <a href="https://facebook.com/prvthmp" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3c-3.3 0-5 2-5 5v3H6v4h3v8h4v-8h3.2l.8-4h-4V9c0-.7.3-1 1-1Z"/></svg></a>
+      <a href="https://instagram.com/prvthmp" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm5.5-2.8a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6Z"/></svg></a>
+      <a href="https://x.com/prvthmp" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3L12 14.7 5.8 22H2.6l7.3-8.4L2.2 2h6.5l4.4 6.6L18.9 2Zm-1.1 17.9h1.7L7.8 4H6l11.8 15.9Z"/></svg></a>
+      <a href="https://linkedin.com/in/prvthmp" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5ZM3 9.8h4v12H3v-12Zm6.2 0H13v1.7h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6v6.3h-4v-5.6c0-1.3 0-3.1-1.9-3.1s-2.2 1.5-2.2 3v5.7h-4v-12Z"/></svg></a>
+      <a href="https://github.com/prvthmpcypher" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 .7a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.2.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 .1.9 2.2 3.4 1.6.1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.2 11.2 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6A11.5 11.5 0 0 0 12 .7Z"/></svg></a>
+    </div>
+    <button id="mobile-menu" class="icon-btn mobile-menu" type="button" aria-label="Open menu">☰</button>
+  </header>
+
+  <main class="app-shell">
+    <section class="hero landing-hero">
+      <div class="hero-card">
+        <span class="eyebrow">🐝 PaperHive · no APIs · works offline</span>
+        <h1>A private PDF toolkit for <span class="gradient-text">unlocking, editing, converting</span> and cleaning documents.</h1>
+        <p class="lead">PaperHive keeps your PDFs on your device. Open password-protected PDFs with a valid password, annotate and redact in a visual workspace, convert pages to images, create PDFs from images or text, and export sanitized flattened copies.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="workspace.html">Launch PDF Workspace</a>
+          <a class="btn" href="#features">Explore features</a>
+          <a class="btn ghost" href="docs.html#legal-use">Read legal use</a>
+        </div>
+        <div class="trust-grid">
+          <div>100% local<span>No document upload</span></div>
+          <div>Offline-ready<span>Bundled PDF.js assets</span></div>
+          <div>Privacy-first<span>No analytics or APIs</span></div>
+        </div>
+      </div>
+      <aside class="panel landing-preview" aria-label="PaperHive preview">
+        <img src="assets/icons/paperhive-logo.svg" alt="PaperHive PDF lock logo">
+        <h2>Your document never leaves your browser.</h2>
+        <p class="muted">Built as a static HTML, CSS and JavaScript app with PDF.js, jsPDF and JSZip vendored locally.</p>
+        <div class="mini-metrics">
+          <span><strong>18+</strong> tool actions</span>
+          <span><strong>0</strong> server uploads</span>
+          <span><strong>PWA</strong> cache support</span>
+        </div>
+      </aside>
+    </section>
+
+    <section id="features">
+      <div class="section-title">
+        <div>
+          <h2>Features listed clearly</h2>
+          <p>Everything is grouped around the real workflow: upload, unlock, view, edit, convert, sanitize and download.</p>
+        </div>
+      </div>
+      <div class="feature-grid">
+        <article class="tool-card"><span class="feature-icon">🔓</span><h3>Password unlock</h3><p>Open PDFs with the valid password you are authorized to use, then export a password-free rebuilt copy.</p></article>
+        <article class="tool-card"><span class="feature-icon">👁️</span><h3>Offline viewer</h3><p>Navigate pages, zoom, rotate view, preview edits, and inspect the document locally with PDF.js.</p></article>
+        <article class="tool-card"><span class="feature-icon">✍️</span><h3>Visual editor</h3><p>Add text, draw/sign, upload signature images, highlight, redact, watermark, and delete edits before export.</p></article>
+        <article class="tool-card"><span class="feature-icon">🧩</span><h3>Rearrange and split</h3><p>Drag pages into a new order, skip unwanted pages, or export selected ranges like 1-3, 5, 8.</p></article>
+        <article class="tool-card"><span class="feature-icon">🖼️</span><h3>Converters</h3><p>Convert PDF pages to image ZIPs, images to PDF, and text notes to simple PDF documents.</p></article>
+        <article class="tool-card"><span class="feature-icon">🧹</span><h3>Sanitized export</h3><p>Rebuild PDFs as flattened pages to avoid copying original metadata, scripts, forms, and encryption settings.</p></article>
+      </div>
+    </section>
+
+    <section id="workflow">
+      <div class="section-title">
+        <div>
+          <h2>Simple offline workflow</h2>
+          <p>Designed to be a more reliable and transparent alternative to upload-based PDF tools.</p>
+        </div>
+      </div>
+      <div class="steps-grid">
+        <div class="security-item"><strong>1. Upload locally</strong><span class="muted">Pick a PDF from your device. Browser memory is used for processing.</span></div>
+        <div class="security-item"><strong>2. Unlock if needed</strong><span class="muted">Enter the correct open password for files you own or are allowed to process.</span></div>
+        <div class="security-item"><strong>3. Edit in workspace</strong><span class="muted">Use the dedicated editor page to add marks, signatures, redactions, watermarks and page changes.</span></div>
+        <div class="security-item"><strong>4. Download result</strong><span class="muted">Export an unlocked flattened PDF or convert pages/images without any remote API.</span></div>
+      </div>
+    </section>
+
+    <section id="tools">
+      <div class="section-title">
+        <div>
+          <h2>Tool categories</h2>
+          <p>The landing page explains the product. The workspace page contains the actual upload and editing tools.</p>
+        </div>
+        <a class="btn primary" href="workspace.html">Open Workspace</a>
+      </div>
+      <div class="tool-grid">
+        <article class="tool-card"><h3>Secure tools</h3><p>Unlock PDF, authorization guard, clear session, password cleanup, sanitized output, local-only processing.</p></article>
+        <article class="tool-card"><h3>Edit tools</h3><p>Text, draw/sign, signature image upload, highlight, redact, watermark, rotate preview, reorder pages, skip pages.</p></article>
+        <article class="tool-card"><h3>Convert tools</h3><p>PDF to JPG/PNG ZIP, image files to PDF, text to PDF, page range extraction, rebuilt flattened PDF download.</p></article>
+      </div>
+    </section>
+
+    <section id="privacy-first">
+      <div class="section-title">
+        <div>
+          <h2>Privacy-first by design</h2>
+          <p>No cloud upload, no ads, no analytics, no CDN requirement, and no hidden API layer.</p>
+        </div>
+      </div>
+      <div class="security-grid">
+        <div class="security-item"><strong>📴 Offline vendor assets</strong><span class="muted">PDF.js worker, CMaps, standard fonts, WASM files, jsPDF and JSZip are bundled.</span></div>
+        <div class="security-item"><strong>🔐 User authorization</strong><span class="muted">PaperHive asks you to confirm permission before unlocking or exporting protected documents.</span></div>
+        <div class="security-item"><strong>🧽 Flattened redaction</strong><span class="muted">Redactions are burned into the exported rebuilt PDF. Always review before sharing.</span></div>
+        <div class="security-item"><strong>⚖️ Legal docs included</strong><span class="muted">Privacy policy, terms, disclaimer and acceptable-use notes are collected on the Docs page.</span></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="cta-card panel">
+        <h2>Ready to edit a PDF privately?</h2>
+        <p class="lead">Launch the workspace, upload your file, edit visually, then download the result — all in your browser.</p>
+        <div class="hero-actions"><a class="btn primary" href="workspace.html">Launch PDF Workspace</a><a class="btn" href="about.html">About the maker</a><a class="btn" href="docs.html">Read docs</a></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>
+        <a class="brand" href="index.html"><img src="assets/icons/paperhive-logo.svg" alt="PaperHive logo"><span><strong>PaperHive</strong><span>Private PDF tools for your browser</span></span></a>
+        <p class="muted">Offline PDF landing page and workspace for unlocking, viewing, editing, converting and sanitizing documents locally.</p>
+      </div>
+      <div class="footer-links"><strong>Product</strong><a href="#features">Features</a><a href="workspace.html">Workspace</a><a href="#workflow">How it works</a><a href="#privacy-first">Security</a></div>
+      <div class="footer-links"><strong>Company</strong><a href="about.html">About & Contact</a><a href="docs.html#privacy">Privacy Policy</a><a href="docs.html#terms">Terms of Service</a></div>
+      <div class="footer-bottom"><span>© 2026 PaperHive.</span><span>No APIs. Client-side only. Offline-ready.</span></div>
+    </footer>
+  </main>
+
+  <script>
+    const menu = document.getElementById('mobile-menu');
+    const nav = document.getElementById('navlinks');
+    menu?.addEventListener('click', () => nav.classList.toggle('open'));
+    document.querySelectorAll('#navlinks a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+  </script>
+</body>
+</html>

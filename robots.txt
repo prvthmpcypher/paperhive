@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://paperhive.app/sitemap.xml
